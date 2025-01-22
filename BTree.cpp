@@ -11,7 +11,7 @@ void BTree::display() {
 }
 void BTree::addDataHelper(Node *root, int data) {
     Node *node = root->addData(data);
-    if (node != NULL && node == root->getParent()) {
+    if (node != NULL && node->getParent() == NULL) {
         m_root = node;
     } else if (node) {
         addDataHelper(node, data);

@@ -8,7 +8,6 @@ class BTree {
         void addData(int);
         void display();
         void displayTree();
-        void setRoot(Node*);
     private:
         Node *m_root;
         void addDataHelper(Node *, int);

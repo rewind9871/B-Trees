@@ -18,10 +18,8 @@ class Node {
         std::vector<Node*> children;
         Node *parent;
         std::vector<int> m_data;
-        void addNewChild();
-        void fixPointers();
+        Node* addDataUpwards(int, Node*, Node*);
         bool isFull();
-        bool isRightmost();
         int  getNumOfLeftChild(int);
         Node* createLeftSibling(int);
         bool comp(int a, int b) {
