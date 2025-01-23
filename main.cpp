@@ -9,6 +9,7 @@ bool is_number(const std::string &);
 int main(int argc, char **argv) {
     BTree tree;
     std::string input;
+    
     while (true) {
         cout << "Enter a number to add: ";
         cin >> input;
@@ -22,31 +23,12 @@ int main(int argc, char **argv) {
         cout << "-----------------------------------------" << endl;
         tree.addData(atoi(input.c_str()));
         tree.displayTree();
+        bool validTree = tree.isValidTree();
+        if (!validTree) {
+            printf("Tree layout is not valid!\n");
+            return 1;
+        }
     }
-    /*tree.addData(5);
-    cout << "-----------------------------------------" << endl;
-    tree.displayTree();
-    tree.addData(4);
-    cout << "-----------------------------------------" << endl;
-    tree.displayTree();
-    tree.addData(9);
-    cout << "-----------------------------------------" << endl;
-    tree.displayTree();
-    tree.addData(3);
-    cout << "-----------------------------------------" << endl;
-    tree.displayTree();
-    tree.addData(10);
-    cout << "-----------------------------------------" << endl;
-    tree.displayTree();
-    tree.addData(15);
-    cout << "-----------------------------------------" << endl;
-    tree.displayTree();
-    tree.addData(16);
-    cout << "-----------------------------------------" << endl;
-    tree.displayTree();
-    tree.addData(17);
-    cout << "-----------------------------------------" << endl;
-    tree.displayTree();*/
     return 0;
 }
 

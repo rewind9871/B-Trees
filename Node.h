@@ -5,13 +5,13 @@
 class Node {
     public:
         Node();
-        Node(Node*, int, int);
         Node(int, Node*, Node*);
         ~Node();
         Node* addData(int);
         Node* getParent();
         void display();
         void displayTree(int);
+        bool isValidNode(int, int);
     private:
         const int maxData = MAX_DATA_SIZE;
         const int minData = maxData/2;
